@@ -1,0 +1,24 @@
+#Markdown file for the Assignment 1 of the course Reproducible Research
+======================================================================
+---
+title: "Assignment1"
+author: "Paulamg"
+date: "Wednesday, February 11, 2015"
+output: html_document
+---
+
+This is the output file for the processing and creation of results for the Reproducible research course
+For further information on the assignment please go to the repo [Readme.md](https://github.com/Paulamg/RepData_PeerAssessment1/blob/master/README.md)
+
+```{r code to read data and make it tidy}
+activity <- read.csv("activity.csv", header=TRUE)
+activity$date <- as.Date.factor(activity$date, "%Y-%m-%d")
+```
+
+You can also embed plots, for example:
+
+```{r, echo=FALSE}
+plot(cars)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
